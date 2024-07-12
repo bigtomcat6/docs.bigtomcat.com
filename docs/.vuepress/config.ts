@@ -4,21 +4,49 @@ import { plumeTheme } from 'vuepress-theme-plume'
 
 import { removeHtmlExtensionPlugin } from 'vuepress-plugin-remove-html-extension'
 
-import { getDirname, path } from "vuepress/utils";
-
 export default defineUserConfig({
-  // 请不要忘记设置默认语言
   lang: 'zh-CN',
+  title: 'How',
+
   theme: plumeTheme({
+
+    avatar: {
+      name: 'How',
+      description: 'Bigtomcat',
+      location: 'Sydney',
+      url: '/logo.png',
+      circle: true,
+
+    },
+
+    navbar: [
+      {text: 'Blog', link: '/'},
+    ],
+
+    blog: {
+      link: '/blog/',
+      tagsLink: '/tags/',
+      archives: true,
+      archivesLink: '/archives/',
+      include: ['1.读书笔记/**/*.md'],
+    },
+
+    notes: {
+      dir: '/',
+      link: '/',
+      notes: [
+        {
+          dir: '1.读书笔记',
+          link: '/1.读书笔记/',
+        },
+      ],
+    },
     
-
-
     footer: {
       message: '',
       copyright: '©2022 - 2024 <a href="https://www.bigtomcat.com/">How</a><br>'
     },
     plugins: {
-      search: false,
     },
   }),
 
