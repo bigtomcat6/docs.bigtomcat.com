@@ -1,63 +1,27 @@
-import { defineUserConfig } from 'vuepress'
 import { viteBundler } from '@vuepress/bundler-vite'
-import { plumeTheme } from 'vuepress-theme-plume'
+import { defineUserConfig } from "vuepress";
+
+import theme from "./theme.js";
 
 import { removeHtmlExtensionPlugin } from 'vuepress-plugin-remove-html-extension'
 
+
+
 export default defineUserConfig({
-  lang: 'zh-CN',
-  title: 'How',
+  base: "/",
 
-  theme: plumeTheme({
+  lang: "zh-CN",
+  title: "How",
+  description: "Bigtomcat",
 
-    avatar: {
-      name: 'How',
-      description: 'Bigtomcat',
-      location: 'Sydney',
-      url: '/logo.png',
-      circle: true,
+  theme,
 
-    },
-
-    navbar: [
-      {text: 'Blog', link: '/'},
-    ],
-
-    blog: {
-      link: '/blog/',
-      tagsLink: '/tags/',
-      archives: true,
-      archivesLink: '/archives/',
-      include: ['1.读书笔记/**/*.md'],
-    },
-
-    notes: {
-      dir: '/',
-      link: '/',
-      notes: [
-        {
-          dir: '1.读书笔记',
-          link: '/1.读书笔记/',
-        },
-      ],
-    },
-    
-    footer: {
-      message: '',
-      copyright: '©2022 - 2024 <a href="https://www.bigtomcat.com/">How</a><br>'
-    },
-    plugins: {
-    },
-  }),
-
-  head: [
-    ['link', { rel: 'stylesheet', href: 'style/index.css'}],
-    ['link', { rel: 'icon', href: '/logo.png'}],
-  ],
+  // 和 PWA 一起启用
+  // shouldPrefetch: false,
 
   plugins: [
     removeHtmlExtensionPlugin(),
   ],
 
   bundler: viteBundler(),
-})
+});
