@@ -25,7 +25,7 @@ export default hopeTheme({
   navbarLayout: {
     start: ["Brand"],
     center: ["Links"],
-    end: ["Outlook"],
+    end: ["Outlook", "Search"],
   },
 
   darkmode: "toggle",
@@ -36,7 +36,7 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: "",
+  footer: "暂存处：<a href='https://docs-pre.bigtomcat.com/'>📒 Preview Version</a>",
   displayFooter: true,
   copyright: 'Copyright © 2022 - 2024 <a href="https://www.bigtomcat.com/">How</a><br>',
 
@@ -98,6 +98,9 @@ export default hopeTheme({
   // 如果想要实时查看任何改变，启用它。注: 这对更新性能有很大负面影响
   hotReload: true,
 
+  prevLink: false,
+  nextLink: false,
+
   // 在这里配置主题提供的插件
   plugins: {
     blog: true,
@@ -112,6 +115,8 @@ export default hopeTheme({
     components: {
       components: ["Badge", "VPCard"],
     },
+
+    searchPro: true,
 
     // 此处开启了很多功能用于演示，你应仅保留用到的功能。
     mdEnhance: {

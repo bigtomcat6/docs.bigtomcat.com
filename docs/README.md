@@ -8,4 +8,5 @@ tagline: Bigtomcat
 title: Home
 bgImage: /IMG_0155.JPG
 bgImageDark: /IMG_0159.JPG
+icon: ic:round-home
 ---
