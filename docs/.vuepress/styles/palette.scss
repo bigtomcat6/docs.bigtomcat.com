@@ -1,0 +1,15 @@
+// you can change colors here
+$theme-color: #096dd9;
+
+@font-face {
+    font-family: Comic-Sans-MS;
+    src: url(https://unsw.cdn.t.bigtomcat.com/web/Comic-Sans-MS.ttf);
+    unicode-range: U+30-39, U+41-5A, U+61-7A, U+C0-FF
+}
+
+@font-face {
+    font-family: HannotateSC-W5;
+    src: url(https://unsw.cdn.t.bigtomcat.com/web/HannotateSC-W5.woff);
+}
+
+$font-family-heading: 'Comic-Sans-MS, HannotateSC-W5'
