@@ -14,7 +14,6 @@ export default defineUserConfig({
   description: "Bigtomcat",
 
   head: [
-    ['link', { rel: 'stylesheet', href: 'styles/Style.scss'}],
     ['link', { rel: 'icon', href: '/logo.png'}],
   ],
 
