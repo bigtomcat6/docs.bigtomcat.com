@@ -8,7 +8,7 @@ export default hopeTheme({
 
   author: {
     name: "How",
-    url: "https://bigtomcat",
+    url: "https://www.bigtomcat.com",
   },
 
   license: 'MIT',
@@ -28,7 +28,7 @@ export default hopeTheme({
     end: ["Outlook", "Search"],
   },
 
-  darkmode: "toggle",
+  darkmode: "switch",
   themeColor: true,
 
 
@@ -247,4 +247,4 @@ export default hopeTheme({
     //   },
     // },
   },
-});
+},{ custom: true });
