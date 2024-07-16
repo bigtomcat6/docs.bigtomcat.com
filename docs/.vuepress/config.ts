@@ -15,6 +15,7 @@ export default defineUserConfig({
 
   head: [
     ['link', { rel: 'stylesheet', href: 'styles/Style.scss'}],
+    ['link', { rel: 'icon', href: '/logo.png'}],
   ],
 
   theme,
