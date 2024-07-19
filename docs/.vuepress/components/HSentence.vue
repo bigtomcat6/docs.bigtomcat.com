@@ -1,0 +1,47 @@
+<template>
+  <div :class="layoutClass">
+    <div class="h5-style"><slot></slot></div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'HSentence',
+  props: {
+    layout: {
+      type: String,
+      default: 'center',
+      validator: value => ['left', 'center', 'right'].includes(value),
+    },
+  },
+  computed: {
+    layoutClass() {
+      return `layout-${this.layout}`;
+    },
+  },
+};
+</script>
+
+<style scoped>
+.layout-left {
+  text-align: left;
+}
+
+.layout-center {
+  text-align: center;
+}
+
+.layout-right {
+  text-align: right;
+}
+
+/* h5-style class to mimic the <h5> style */
+.h5-style {
+  font-size: 1.05em; /* Adjust based on your <h5> style */
+  font-weight: bold; /* Typical for headings, adjust as necessary */
+  line-height: 1.3; /* Adjust based on your <h5> style */
+  /* margin: 1.67em 0; /* Adjust based on your <h5> style */
+  font-family: Comic-Sans-MS, HannotateSC-W5
+}
+
+</style>
