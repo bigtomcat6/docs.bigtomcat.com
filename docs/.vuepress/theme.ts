@@ -44,6 +44,7 @@ export default hopeTheme({
   blog: {
     description: "Bigtomcat",
     intro: "/intro",
+    timeline: "简单快乐，理应如此。",
     // medias: {
     //   Baidu: "https://example.com",
     //   BiliBili: "https://example.com",
