@@ -1,3 +1,3 @@
 # How
 
- * Documents Link: [docs.bigtomcat.com](https://notes.unsw.docs.bigtomcat.com/)
+ * Documents Link: [docs.bigtomcat.com](https://docs.bigtomcat.com/)
