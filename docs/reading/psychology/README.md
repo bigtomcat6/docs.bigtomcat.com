@@ -1,6 +1,6 @@
 ---
 title: 心理学
-icon: material-symbols-light:psychology-alt-rounded
+icon: bi:arrow-through-heart-fill
 article: false
 index: false
 dir:

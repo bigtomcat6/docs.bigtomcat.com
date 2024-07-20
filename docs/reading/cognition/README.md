@@ -1,6 +1,6 @@
 ---
 title: 认知成长
-icon: material-symbols-light:cognition
+icon: material-symbols:person-play-outline
 article: false
 index: false
 dir:
