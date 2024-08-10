@@ -36,9 +36,9 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: "暂存处：<a href='https://docs-pre.bigtomcat.com/'>📒 Preview Version</a>",
+  footer: "暂存处：<a href='https://docs-pre.bigtomcat.com/' target='_blank'>📒 Preview Version</a>",
   displayFooter: true,
-  copyright: 'Copyright © 2022 - 2024 <a href="https://www.bigtomcat.com/">How</a><br>',
+  copyright: 'Copyright © 2022 - 2024 <a href="https://www.bigtomcat.com/" target="_blank">How</a><br>',
 
   // 博客相关
   blog: {
