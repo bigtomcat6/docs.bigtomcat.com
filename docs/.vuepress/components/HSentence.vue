@@ -13,9 +13,24 @@ export default {
       default: 'center',
       validator: value => ['left', 'center', 'right'].includes(value),
     },
+    left: {
+      type: Boolean,
+      default: false,
+    },
+    center: {
+      type: Boolean,
+      default: false,
+    },
+    right: {
+      type: Boolean,
+      default: false,
+    }
   },
   computed: {
     layoutClass() {
+      if (this.left) return 'layout-left';
+      if (this.center) return 'layout-center';
+      if (this.right) return 'layout-right';
       return `layout-${this.layout}`;
     },
   },
