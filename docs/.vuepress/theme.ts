@@ -24,8 +24,8 @@ export default hopeTheme({
   navbar,
   navbarLayout: {
     start: ["Brand"],
-    center: ["Links"],
-    end: ["Outlook", "Search"],
+    center: [],
+    end: ["Links", "Search", "Outlook"],
   },
 
   darkmode: "switch",
@@ -110,12 +110,12 @@ export default hopeTheme({
 
     // 启用之前需安装 @waline/client
     // 警告: 这是一个仅供演示的测试服务，在生产环境中请自行部署并使用自己的服务！
-    comment: {
-      comment: false,
-      provider: "Waline",
-      serverURL: "https://waline.server.docs.bigtomcat.com",
-      pageview: true,
-    },
+    // comment: {
+    //   comment: false,
+    //   provider: "Waline",
+    //   serverURL: "https://waline.server.docs.bigtomcat.com",
+    //   pageview: false,
+    // },
 
     components: {
       components: ["Badge", "VPCard"],
