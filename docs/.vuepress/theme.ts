@@ -45,6 +45,7 @@ export default hopeTheme({
     description: "Bigtomcat",
     intro: "/intro",
     timeline: "简单快乐，理应如此。",
+    articleInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
     // medias: {
     //   Baidu: "https://example.com",
     //   BiliBili: "https://example.com",
@@ -102,7 +103,7 @@ export default hopeTheme({
   prevLink: false,
   nextLink: false,
 
-  pageInfo: ["Author", "Original", "Date", "Category", "Tag", "Word", "ReadingTime"],
+  pageInfo: ["Author", "Original", "Date", "Category", "Tag", "Word", "ReadingTime", "PageView"],
 
   // 在这里配置主题提供的插件
   plugins: {
@@ -110,12 +111,12 @@ export default hopeTheme({
 
     // 启用之前需安装 @waline/client
     // 警告: 这是一个仅供演示的测试服务，在生产环境中请自行部署并使用自己的服务！
-    // comment: {
-    //   comment: false,
-    //   provider: "Waline",
-    //   serverURL: "https://waline.server.docs.bigtomcat.com",
-    //   pageview: false,
-    // },
+    comment: {
+      comment: false,
+      provider: "Waline",
+      serverURL: "https://waline.server.docs.bigtomcat.com",
+      pageview: true,
+    },
 
     components: {
       components: ["Badge", "VPCard"],
