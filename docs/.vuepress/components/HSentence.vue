@@ -1,6 +1,8 @@
 <template>
   <div :class="layoutClass">
-    <div class="h5-style"><slot></slot></div>
+    <div :class="isEm">
+      <div class="h5-style"><slot></slot></div>
+    </div>
   </div>
 </template>
 
@@ -24,6 +26,10 @@ export default {
     right: {
       type: Boolean,
       default: false,
+    },
+    em: {
+      type: Boolean,
+      default: false,
     }
   },
   computed: {
@@ -33,11 +39,14 @@ export default {
       if (this.right) return 'layout-right';
       return `layout-${this.layout}`;
     },
+    isEm() {
+      return this.em ? 'em' : '';
+    }
   },
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .layout-left {
   text-align: left;
 }
@@ -52,11 +61,15 @@ export default {
 
 /* h5-style class to mimic the <h5> style */
 .h5-style {
-  font-size: 1.05em; /* Adjust based on your <h5> style */
+  font-size: 1.13em; /* Adjust based on your <h5> style */
   font-weight: bold; /* Typical for headings, adjust as necessary */
   line-height: 1.3; /* Adjust based on your <h5> style */
   /* margin: 1.67em 0; /* Adjust based on your <h5> style */
   font-family: Comic-Sans-MS, HannotateSC-W5
+}
+
+.em {
+  font-style: italic;
 }
 
 </style>
