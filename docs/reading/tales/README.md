@@ -1,5 +1,5 @@
 ---
-title: 童话故事
+title: 漫画
 icon: cil:animal
 article: false
 index: false

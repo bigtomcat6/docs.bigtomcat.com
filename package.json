@@ -14,15 +14,18 @@
   "license": "MIT",
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.14",
+    "@vuepress/helper": "2.0.0-rc.40",
+    "@vueuse/core": "^10.11.1",
+    "@waline/client": "^3.3.0",
     "echarts": "^5.5.1",
     "markmap-lib": "^0.17.0",
     "markmap-toolbar": "^0.17.0",
     "markmap-view": "^0.17.0",
     "sass": "1.77.6",
-    "vue": "^3.4.31",
+    "vue": "^3.4.37",
     "vuepress": "2.0.0-rc.14",
-    "vuepress-plugin-remove-html-extension": "1.11.0",
-    "vuepress-plugin-search-pro": "2.0.0-rc.51",
-    "vuepress-theme-hope": "2.0.0-rc.51"
+    "vuepress-plugin-remove-html-extension": "1.12.0",
+    "vuepress-plugin-search-pro": "2.0.0-rc.52",
+    "vuepress-theme-hope": "2.0.0-rc.52"
   }
 }
