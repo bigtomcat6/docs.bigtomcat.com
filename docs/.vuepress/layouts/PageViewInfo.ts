@@ -8,6 +8,11 @@ import { usePure } from "@theme-hope/composables/index";
 import { EyeIcon, FireIcon } from "@theme-hope/modules/info/components/icons";
 import { useMetaLocale } from "@theme-hope/modules/info/composables/index";
 
+const replaceURL = (url: string): string => {
+  if (url.endsWith("/"))  return url;
+  else  return url.includes(".html") ? url : url + ".html";
+};
+
 export default defineComponent({
   name: "PageViewInfo",
 
@@ -64,10 +69,10 @@ export default defineComponent({
                   class: "vp-pageview waline-pageview-count",
                   "data-path": isString(props.pageview)
                     ? props.pageview
-                    : route.path.includes(".html") ? route.path : route.path + ".html",
+                    : replaceURL(route.path),
                   "data-page-key": isString(props.pageview)
                     ? props.pageview
-                    : route.path.includes(".html") ? route.path : route.path + ".html",
+                    : replaceURL(route.path),
                 },
                 "...",
               ),
