@@ -2,6 +2,7 @@ import { defineClientConfig } from "vuepress/client";
 import { setupTransparentNavbar } from "vuepress-theme-hope/presets/transparentNavbar.js";
 
 import HSentence from "./components/HSentence.vue";
+import HaoReadingLayout from "./layouts/HaoReadingLayout.vue";
 
 export default defineClientConfig({
   enhance({app}) {
@@ -13,4 +14,5 @@ export default defineClientConfig({
       light: "#333", dark: "#bbb"
     });
   },
+  // layouts: { HaoReadingLayout },
 });
