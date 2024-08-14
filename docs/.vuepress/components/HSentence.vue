@@ -61,7 +61,7 @@ export default {
 
 /* h5-style class to mimic the <h5> style */
 .h5-style {
-  font-size: 1.13em; /* Adjust based on your <h5> style */
+  font-size: 1.05em; /* Adjust based on your <h5> style */
   font-weight: bold; /* Typical for headings, adjust as necessary */
   line-height: 1.3; /* Adjust based on your <h5> style */
   /* margin: 1.67em 0; /* Adjust based on your <h5> style */
