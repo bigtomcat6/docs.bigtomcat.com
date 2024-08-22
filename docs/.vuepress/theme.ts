@@ -45,6 +45,7 @@ export default hopeTheme({
     description: "Bigtomcat",
     intro: "/intro",
     timeline: "简单快乐，理应如此。",
+    articlePerPage: 20,
     articleInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
     // medias: {
     //   Baidu: "https://example.com",
