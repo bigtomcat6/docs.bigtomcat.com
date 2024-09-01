@@ -1,12 +1,16 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export default sidebar({
-  "/": [
-    "",
+  "/reading/": [
+    "/",
     {
-      prefix: "reading/",
       text: "",
-      children: "structure",
+      children: "structure"
     }
   ],
+  "/posts": [
+    "/",
+    "",
+  ]
+  
 });

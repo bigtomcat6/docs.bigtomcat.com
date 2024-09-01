@@ -10,7 +10,16 @@ import { removeHtmlExtensionPlugin } from 'vuepress-plugin-remove-html-extension
 export default defineUserConfig({
   base: "/",
 
-  lang: "zh-CN",
+  // lang: "zh-CN",
+  locales: {
+    "/": {
+      lang: "zh-CN",
+    },
+    "/en/": {
+      lang: "en-US",
+    }
+  },
+
   title: "How",
   description: "Bigtomcat",
 
