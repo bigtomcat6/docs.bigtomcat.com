@@ -1,6 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
 
-import navbar from "./navbar.js";
+import { zhNAV, enNAV } from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
@@ -21,11 +21,12 @@ export default hopeTheme({
 
   // 导航栏
   navbarTitle: '',
-  navbar,
+  // navbar,
+
   navbarLayout: {
     start: ["Brand"],
     center: [],
-    end: ["Links", "Search", "Outlook"],
+    end: ["Links", "Search", "Outlook", "Language"],
   },
 
   darkmode: "switch",
@@ -34,6 +35,16 @@ export default hopeTheme({
 
   // 侧边栏
   sidebar,
+
+  locales: {
+    "/": {
+      navbar: zhNAV
+    },
+    "/en/": {
+      navbar: enNAV
+    },
+  },
+
 
   // 页脚
   footer: "暂存处：<a href='https://docs-pre.bigtomcat.com/' target='_blank'>📒 Preview Version</a>",
@@ -104,7 +115,7 @@ export default hopeTheme({
   prevLink: false,
   nextLink: false,
 
-  pageInfo: ["Author", "Original", "Date", "Category", "Tag", "Word", "ReadingTime", "PageView"],
+  pageInfo: ["Original", "Date", "Category", "Tag", "Word", "ReadingTime", "PageView"],
 
   // 在这里配置主题提供的插件
   plugins: {
