@@ -7,6 +7,6 @@ export const zhNAV =  navbar([
 ]);
 
 export const enNAV = navbar([
-  "/en/",
-  "/en/posts/"
+  "",
+  "posts/"
 ]);
