@@ -1,7 +1,12 @@
 import { navbar } from "vuepress-theme-hope";
 
-export default navbar([
+export const zhNAV =  navbar([
   "/",
   "reading/",
+  "posts/"
+]);
+
+export const enNAV = navbar([
+  "",
   "posts/"
 ]);
