@@ -1,6 +1,6 @@
 import { sidebar } from "vuepress-theme-hope";
 
-export default sidebar({
+export const zhSide = sidebar({
   "/reading/": [
     "/",
     {
@@ -13,4 +13,11 @@ export default sidebar({
     "",
   ]
   
+});
+
+export const enSide = sidebar({
+  "/en/posts": [
+    "/en/",
+    "",
+  ]
 });
