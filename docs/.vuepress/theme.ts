@@ -1,7 +1,7 @@
 import { hopeTheme } from "vuepress-theme-hope";
 
 import { zhNAV, enNAV } from "./navbar.js";
-import sidebar from "./sidebar.js";
+import { zhSide, enSide } from "./sidebar.js";
 
 export default hopeTheme({
   hostname: "https://docs.bigtomcat.com",
@@ -34,14 +34,16 @@ export default hopeTheme({
 
 
   // 侧边栏
-  sidebar,
+  // sidebar,
 
   locales: {
     "/": {
-      navbar: zhNAV
+      navbar: zhNAV,
+      sidebar: zhSide
     },
     "/en/": {
-      navbar: enNAV
+      navbar: enNAV,
+      sidebar: enSide
     },
   },
 
