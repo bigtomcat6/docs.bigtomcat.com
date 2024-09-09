@@ -12,9 +12,9 @@ date: 2024-09-01
 
 **Conventional Commits** 是一种简单但强大的提交信息规范，旨在帮助我们保持一致的提交历史记录。这一规范提供了一个结构化的方法，方便进行自动化任务，如版本控制和生成变更日志。它与 Semantic Versioning (SemVer) 紧密结合，以便在提交信息中描述新特性、修复和重大变更。
 
-在本文中，我们将介绍 Conventional Commits 规范，提供一些示例，并说明为什么在管理项目的提交历史时，这种规范非常有用。
-
 <!-- more -->
+
+在本文中，我们将介绍 Conventional Commits 规范，提供一些示例，并说明为什么在管理项目的提交历史时，这种规范非常有用。
 
 ## Conventional Commits 结构
 

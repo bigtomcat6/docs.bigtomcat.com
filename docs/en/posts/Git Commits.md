@@ -16,8 +16,6 @@ date: 2024-09-01
 
 In this post, we'll explore the Conventional Commits specification, provide examples, and explain why it's useful for managing commit history in your projects.
 
-<!-- more -->
-
 ## Structure of a Conventional Commit
 
 A commit message using the Conventional Commits format follows this structure:
