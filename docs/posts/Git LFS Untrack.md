@@ -1,6 +1,6 @@
 ---
-shortTitle: Git LFS Untrack
-title: Git LFS Untrack
+shortTitle: Git LFS文件移回
+title: 如何将 Git LFS 中的文件移回普通的 Git 管理
 category:
     - 手记
 tags:
@@ -8,87 +8,118 @@ tags:
 date: 2024-09-09
 ---
 
-要将已经存储在 Git LFS 中的图片文件恢复为普通的 Git 文件，并从 Git LFS 中取消对这些文件的管理，你需要执行以下几个步骤：
+# 如何将 Git LFS 中的文件移回普通的 Git 管理
+
+在使用 Git LFS（Large File Storage）时，我们可以将大文件，如图片、视频等，存储在 LFS 中来节省 Git 仓库的空间。然而，有时候我们可能希望将这些文件移回普通的 Git 存储中，而不再使用 LFS。本文将介绍如何将 Git LFS 中的文件恢复为普通的 Git 文件并从 LFS 中删除。
+
+<!-- more -->
+
+## 背景
+
+假设我们有这样一个规则：
+
+```bash
+**/img/* filter=lfs diff=lfs merge=lfs -text
+```
+
+目前已经有一些图片符合这些规则，并且已经存储在 Git LFS 中。现在，我们希望将这些文件移回普通的 Git，并且不再使用 LFS 来管理它们。
+
+## 步骤
 
 ### 1. 修改 `.gitattributes` 文件
-首先，你需要在项目的根目录下找到并修改 `.gitattributes` 文件。
 
-找到之前定义的规则 `**/img/* filter=lfs diff=lfs merge=lfs -text`，并将这条规则删除或注释掉（可以在行首加上 `#` 来注释）。这样，Git 不再对这些文件应用 LFS 管理。
+首先，我们需要修改项目中的 `.gitattributes` 文件。
+
+找到并删除或注释掉以下规则：
+
+```bash
+**/img/* filter=lfs diff=lfs merge=lfs -text
+```
+
+删除这条规则后，Git 将不再对 `img` 文件夹下的图片应用 LFS 管理。
 
 ### 2. 移除文件的 LFS 跟踪
 
-然后，使用 `git lfs untrack` 命令来移除文件的 LFS 跟踪。执行以下命令：
+接下来，我们要移除这些文件的 LFS 跟踪。使用以下命令：
 
 ```bash
 git lfs untrack "**/img/*"
 ```
 
-这将告诉 Git LFS 停止跟踪 `img` 文件夹中的文件。
+此命令会通知 Git LFS 停止跟踪 `img` 文件夹中的图片文件。
 
-### 3. 手动将 LFS 中的文件移回普通 Git
+### 3. 手动将文件移回普通的 Git
 
-Git LFS 存储的是指向大文件的指针，而不是文件的实际内容。所以你需要手动替换 LFS 中的文件为普通的文件。可以按照以下步骤操作：
+由于 LFS 中存储的是指向文件的指针，我们需要手动将文件移回普通的 Git 存储。以下是具体的步骤：
 
-- 首先，检查 LFS 文件的状态：
-  
-  ```bash
-  git lfs ls-files
-  ```
+#### 1. 检查 LFS 文件的状态
 
-  这会列出所有正在由 LFS 跟踪的文件，确保你能看到你想移除的图片文件。
+我们可以通过 `git lfs ls-files` 查看当前有哪些文件正在被 LFS 跟踪：
 
-- 接下来，手动重新添加文件。你可以通过以下方式完成：
+```bash
+git lfs ls-files
+```
 
-  1. **备份 LFS 中的文件**：你可以在当前目录下将图片文件备份到一个临时文件夹中，以防出现问题。
+确保你看到了希望移除的文件。
 
-  2. **删除当前的 LFS 文件**：
-     
-     ```bash
-     git rm --cached path/to/img/file.jpg
-     ```
+#### 2. 备份文件（可选）
 
-     这样会将 LFS 相关的指针文件从暂存区中移除。
+为避免出现问题，可以先将图片文件备份到一个临时文件夹中。
 
-  3. **重新添加文件**：
-     
-     你可以使用如下命令将文件重新添加到普通的 Git 存储中：
+#### 3. 删除 LFS 指针文件
 
-     ```bash
-     git add path/to/img/file.jpg
-     ```
+我们可以通过 `git rm --cached` 命令删除 LFS 中的文件指针：
 
-  4. **提交修改**：
+```bash
+git rm --cached path/to/img/file.jpg
+```
 
-     ```bash
-     git commit -m "Remove files from LFS and store in normal Git"
-     ```
+这不会删除文件本身，而是会从 Git 的暂存区中移除这些文件的 LFS 指针。
+
+#### 4. 重新添加文件到普通 Git
+
+接下来，将这些文件重新添加到普通 Git 中：
+
+```bash
+git add path/to/img/file.jpg
+```
+
+#### 5. 提交更改
+
+提交这次修改：
+
+```bash
+git commit -m "Remove files from LFS and store in normal Git"
+```
 
 ### 4. 清理 LFS 中的旧文件
 
-移除文件后，它们依然可能存储在 LFS 中，占用空间。可以使用以下命令清理不再使用的 LFS 对象：
+在将文件移出 LFS 后，它们可能仍然会占用 LFS 的存储空间。我们可以使用以下命令清理不再使用的 LFS 文件：
 
 ```bash
 git lfs prune
 ```
 
-这将删除所有不再需要的 LFS 文件，释放存储空间。
+这将移除所有不再被 Git 追踪的 LFS 对象，释放存储空间。
 
 ### 5. 推送到远程仓库
 
-最后，将你的更改推送到远程仓库：
+最后，将更改推送到远程仓库：
 
 ```bash
 git push origin main
 ```
 
-（请确保 `main` 是你的当前分支，或者根据你的情况修改分支名称。）
+请根据你的情况修改 `main` 为你正在使用的分支名称。
 
-### 总结
+## 总结
 
-1. 修改 `.gitattributes` 文件，取消对图片的 LFS 管理规则。
-2. 使用 `git lfs untrack` 命令取消文件的 LFS 跟踪。
-3. 手动删除并重新添加这些文件到 Git 仓库。
-4. 提交并推送这些更改。
-5. 使用 `git lfs prune` 来清理旧的 LFS 文件。
+通过以上步骤，我们成功地将文件从 Git LFS 中移回到普通的 Git 管理中。以下是总结步骤：
 
-通过这些步骤，你可以将 LFS 中的图片文件移回普通的 Git 管理中，并从 LFS 中删除这些文件。
+1. 修改 `.gitattributes` 文件，取消 LFS 管理规则。
+2. 使用 `git lfs untrack` 停止 LFS 对文件的跟踪。
+3. 删除 LFS 文件指针并重新添加文件到普通 Git。
+4. 提交并推送更改。
+5. 使用 `git lfs prune` 来清理不再使用的 LFS 文件。
+
+通过这些操作，Git 仓库将不再使用 LFS 来管理这些文件，它们将存储在普通的 Git 版本控制中。
