@@ -2,7 +2,7 @@
 shortTitle: Git LFS Untrack
 title: How to Move Files from Git LFS Back to Standard Git Management
 category:
-    - 手记
+    - Journal
 tags:
     - Git
 date: 2024-09-09
