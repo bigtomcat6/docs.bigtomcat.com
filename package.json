@@ -18,6 +18,7 @@
     "@vueuse/core": "^10.11.1",
     "@waline/client": "^3.3.0",
     "echarts": "^5.5.1",
+    "katex": "^0.16.11",
     "markmap-lib": "^0.17.0",
     "markmap-toolbar": "^0.17.0",
     "markmap-view": "^0.17.0",
