@@ -19,7 +19,7 @@ Let's first dive into the basic logic gates, which form the building blocks of a
 
 ### 1. **AND Gate**
 - **Function**: The output is 1 if and only if all inputs are 1. Otherwise, the output is 0.
-- **Symbol**: $A \, \text{AND} \, B$ or $A \cdot B$
+- **Symbol**: $A \, \text{AND} \, B$, $A \, \land \, B$  or $A \cdot B$
 - **Truth Table**:
 
 | A | B | Output (A AND B) |
@@ -31,7 +31,7 @@ Let's first dive into the basic logic gates, which form the building blocks of a
 
 ### 2. **OR Gate**
 - **Function**: The output is 1 if at least one input is 1. If both inputs are 0, the output is 0.
-- **Symbol**: $A \, \text{OR} \, B$ or $A + B$
+- **Symbol**: $A \, \text{OR} \, B$ , $A \lor B$ or $A + B$
 - **Truth Table**:
 
 | A | B | Output (A OR B) |
