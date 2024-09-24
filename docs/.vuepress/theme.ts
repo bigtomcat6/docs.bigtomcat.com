@@ -147,12 +147,12 @@ export default hopeTheme({
     mdEnhance: {
       align: true,
       attrs: true,
-      codetabs: true,
+      // codetabs: true,
       component: true,
       demo: true,
-      figure: true,
-      imgLazyload: true,
-      imgSize: true,
+      // igure: true,
+      // imgLazyload: true,
+      // imgSize: true,
       include: true,
       mark: true,
       plantuml: true,
@@ -172,7 +172,7 @@ export default hopeTheme({
       ],
       sub: true,
       sup: true,
-      tabs: true,
+      // tabs: true,
       tasklist: true,
       vPre: true,
       markmap: true,
@@ -193,7 +193,7 @@ export default hopeTheme({
       // gfm: true,
 
       // 在启用之前安装 katex
-      katex: true,
+      // katex: true,
 
       // 在启用之前安装 mathjax-full
       // mathjax: true,
@@ -277,6 +277,8 @@ export default hopeTheme({
     //     ],
     //   },
     // },
+
+    markdownImage: false,
   },
   
 },{ custom: true });
