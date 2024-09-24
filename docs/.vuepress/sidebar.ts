@@ -11,13 +11,22 @@ export const zhSide = sidebar({
   "/posts": [
     "/",
     "",
-  ]
-  
+  ],
+  "/category/": false,
+  "/tag/": false,
+  "/star/": false,
+  "/article/": false,
+  "/timeline/": false,
 });
 
 export const enSide = sidebar({
   "/en/posts": [
     "/en/",
     "",
-  ]
+  ],
+  "/en/category/": false,
+  "/en/tag/": false,
+  "/en/star/": false,
+  "/en/article/": false,
+  "/en/timeline/": false,
 });

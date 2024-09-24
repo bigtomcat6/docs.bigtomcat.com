@@ -1,5 +1,5 @@
 // you can change colors here
-$theme-color: #3eaf7c; // #096dd9
+$theme-color: #3eaf7c !default; // #096dd9
 
 @font-face {
     font-family: Comic-Sans-MS;
@@ -12,5 +12,5 @@ $theme-color: #3eaf7c; // #096dd9
     src: url(https://unsw.cdn.t.bigtomcat.com/web/HannotateSC-W5.woff);
 }
 
-$font-family-heading: 'Comic-Sans-MS, HannotateSC-W5';
-$font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"';
+$vp-font-heading: 'Comic-Sans-MS, HannotateSC-W5';
+$vp-font: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"';
