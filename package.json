@@ -15,6 +15,9 @@
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.15",
     "@vuepress/helper": "2.0.0-rc.42",
+    "@vuepress/plugin-markdown-image": "2.0.0-rc.47",
+    "@vuepress/plugin-markdown-math": "2.0.0-rc.49",
+    "@vuepress/plugin-markdown-tab": "2.0.0-rc.47",
     "@vuepress/plugin-redirect": "2.0.0-rc.51",
     "@vueuse/core": "^10.11.1",
     "@waline/client": "^3.3.2",
