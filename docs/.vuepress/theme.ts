@@ -272,6 +272,8 @@ export default hopeTheme({
     //     ],
     //   },
     // },
+
+    markdownImage: false,
   },
   
 },{ custom: true });
