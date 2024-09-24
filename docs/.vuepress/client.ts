@@ -11,7 +11,8 @@ export default defineClientConfig({
   setup: () => {
     setupTransparentNavbar({ 
       type: "homepage" || "blog-homepage",
-      light: "#333", dark: "#bbb"
+      light: "#333", dark: "#bbb",
+      threshold: 20
     });
   },
   // layouts: { HaoReadingLayout },
