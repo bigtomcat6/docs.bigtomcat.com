@@ -3,10 +3,12 @@ import { navbar } from "vuepress-theme-hope";
 export const zhNAV =  navbar([
   "/",
   "reading/",
-  "posts/"
+  "posts/",
+  "about"
 ]);
 
 export const enNAV = navbar([
   "/en/",
-  "/en/posts/"
+  "/en/posts/",
+  "/en/about"
 ]);
