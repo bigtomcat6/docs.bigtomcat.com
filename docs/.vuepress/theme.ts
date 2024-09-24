@@ -49,7 +49,7 @@ export default hopeTheme({
 
 
   // 页脚
-  footer: "暂存处：<a href='https://docs-pre.bigtomcat.com/' target='_blank'>📒 Preview Version</a>",
+  // footer: "",
   displayFooter: true,
   copyright: 'Copyright © 2022 - 2024 <a href="https://www.bigtomcat.com/" target="_blank">How</a><br>',
 
