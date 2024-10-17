@@ -1,5 +1,5 @@
 ---
-title: 杂项
+title: Miscellaneous
 icon: solar:pin-list-bold-duotone
 article: false
 index: false
