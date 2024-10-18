@@ -8,9 +8,12 @@ export const zhSide = sidebar({
       children: "structure"
     }
   ],
-  "/posts": [
+  "/posts/": [
     "/",
-    "",
+    {
+      text: "",
+      children: "structure"
+    }
   ],
   "/category/": false,
   "/tag/": false,
@@ -20,9 +23,12 @@ export const zhSide = sidebar({
 });
 
 export const enSide = sidebar({
-  "/en/posts": [
+  "/en/posts/": [
     "/en/",
-    "",
+    {
+      text: "",
+      children: "structure"
+    }
   ],
   "/en/category/": false,
   "/en/tag/": false,
