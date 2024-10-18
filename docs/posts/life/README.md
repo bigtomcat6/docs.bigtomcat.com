@@ -4,7 +4,7 @@ icon: bx:book-heart
 article: false
 index: false
 dir:
-    order: 9
+    order: 3
 ---
 
 <Catalog />
