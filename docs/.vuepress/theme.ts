@@ -11,7 +11,7 @@ export default hopeTheme({
     url: "https://www.bigtomcat.com",
   },
 
-  license: 'MIT',
+  license: 'Apache-2.0',
 
   iconAssets: 'iconify', // "fontawesome-with-brands",
 
