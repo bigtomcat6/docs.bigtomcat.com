@@ -10,7 +10,13 @@ export default defineClientConfig({
   },
   setup: () => {
     setupTransparentNavbar({ 
-      type: "all",
+      type: "blog-homepage",
+      light: "#333", dark: "#bbb",
+      threshold: 20
+    });
+
+    setupTransparentNavbar({ 
+      type: "homepage",
       light: "#333", dark: "#bbb",
       threshold: 20
     });
