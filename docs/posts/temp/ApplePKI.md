@@ -7,6 +7,8 @@ tags:
 date: 2025-01-06
 ---
 
+<!-- more -->
+
 ## 1. 安装 Apple Development Certificates
 
 > Xcode → Settings → Accounts → Manage Certificates → Export Certificate
