@@ -51,7 +51,7 @@ export default hopeTheme({
   // 页脚
   // footer: "",
   displayFooter: true,
-  copyright: 'Copyright © 2022 - 2024 <a href="https://www.bigtomcat.com/" target="_blank">How</a><br>',
+  copyright: 'Copyright © 2022 - 2025 <a href="https://www.bigtomcat.com/" target="_blank">How</a><br>',
 
   // 博客相关
   blog: {
