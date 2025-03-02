@@ -7,6 +7,8 @@ tags:
 date: 2025-02-23
 ---
 
+<!-- more -->
+
 ## 安装 Oh my zsh
 
 | Method    | Command                                                      |
