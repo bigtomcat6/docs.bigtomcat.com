@@ -35,7 +35,9 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
-      "@parcel/watcher"
+      "@parcel/watcher",
+      "esbuild",
+      "vue-demi"
     ]
   }
 }
