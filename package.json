@@ -32,5 +32,11 @@
     "vuepress-plugin-remove-html-extension": "1.15.0",
     "vuepress-plugin-search-pro": "2.0.0-rc.59",
     "vuepress-theme-hope": "2.0.0-rc.59"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "vue-demi"
+    ]
   }
 }
