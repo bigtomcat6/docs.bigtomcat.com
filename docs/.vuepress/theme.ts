@@ -13,8 +13,6 @@ export default hopeTheme({
 
   license: 'Apache-2.0',
 
-  iconAssets: 'iconify', // "fontawesome-with-brands",
-
   logo: "/logo.svg",
 
   docsDir: "docs",
@@ -119,6 +117,85 @@ export default hopeTheme({
 
   pageInfo: ["Original", "Date", "Category", "Tag", "Word", "ReadingTime", "PageView"],
 
+  markdown: {
+    align: true,
+    attrs: true,
+    codeTabs: true,
+    component: true,
+    demo: true,
+    // igure: true,
+    figure: false,
+    imgLazyload: true,
+    imgMark: true,
+    imgSize: true,
+    include: true,
+    mark: true,
+    plantuml: true,
+    spoiler: true,
+    math: {
+      type: "katex",
+    },
+
+    stylize: [
+      {
+        matcher: "Recommended",
+        replacer: ({ tag }) => {
+          if (tag === "em")
+            return {
+              tag: "Badge",
+              attrs: { type: "tip" },
+              content: "Recommended",
+            };
+        },
+      },
+    ],
+    sub: true,
+    sup: true,
+    tabs: true,
+    tasklist: true,
+    vPre: true,
+    markmap: true,
+    footnote: true,
+
+    // 在启用之前安装 chart.js
+    // chart: true,
+
+    // insert component easily
+
+    // 在启用之前安装 echarts
+    echarts: true,
+
+    // 在启用之前安装 flowchart.ts
+    // flowchart: true,
+
+    // gfm requires mathjax-full to provide tex support
+    // gfm: true,
+
+    // 在启用之前安装 katex
+    // katex: true,
+
+    // 在启用之前安装 mathjax-full
+    // mathjax: true,
+
+    // 在启用之前安装 mermaid
+    // mermaid: true,
+
+    // playground: {
+    //   presets: ["ts", "vue"],
+    // },
+
+    // 在启用之前安装 reveal.js
+    // revealJs: {
+    //   plugins: ["highlight", "math", "search", "notes", "zoom"],
+    // },
+
+    // 在启用之前安装 @vue/repl
+    // vuePlayground: true,
+
+    // install sandpack-vue3 before enabling it
+    // sandpack: true,
+  },
+
   // 在这里配置主题提供的插件
   plugins: {
     blog: true,
@@ -136,85 +213,15 @@ export default hopeTheme({
       components: ["Badge", "VPCard"],
     },
 
-    searchPro: {
+    slimsearch: {
       hotKeys: [
         { key: "k", ctrl: true },
         { key: "k", meta: true },
       ]
     },
 
-    // 此处开启了很多功能用于演示，你应仅保留用到的功能。
-    mdEnhance: {
-      align: true,
-      attrs: true,
-      // codetabs: true,
-      component: true,
-      demo: true,
-      // igure: true,
-      // imgLazyload: true,
-      // imgSize: true,
-      include: true,
-      mark: true,
-      plantuml: true,
-      spoiler: true,
-      stylize: [
-        {
-          matcher: "Recommended",
-          replacer: ({ tag }) => {
-            if (tag === "em")
-              return {
-                tag: "Badge",
-                attrs: { type: "tip" },
-                content: "Recommended",
-              };
-          },
-        },
-      ],
-      sub: true,
-      sup: true,
-      // tabs: true,
-      tasklist: true,
-      vPre: true,
-      markmap: true,
-      footnote: true,
-
-      // 在启用之前安装 chart.js
-      // chart: true,
-
-      // insert component easily
-
-      // 在启用之前安装 echarts
-      echarts: true,
-
-      // 在启用之前安装 flowchart.ts
-      // flowchart: true,
-
-      // gfm requires mathjax-full to provide tex support
-      // gfm: true,
-
-      // 在启用之前安装 katex
-      // katex: true,
-
-      // 在启用之前安装 mathjax-full
-      // mathjax: true,
-
-      // 在启用之前安装 mermaid
-      // mermaid: true,
-
-      // playground: {
-      //   presets: ["ts", "vue"],
-      // },
-
-      // 在启用之前安装 reveal.js
-      // revealJs: {
-      //   plugins: ["highlight", "math", "search", "notes", "zoom"],
-      // },
-
-      // 在启用之前安装 @vue/repl
-      // vuePlayground: true,
-
-      // install sandpack-vue3 before enabling it
-      // sandpack: true,
+    icon: {
+      assets: "iconify",
     },
 
     redirect: {
@@ -277,8 +284,6 @@ export default hopeTheme({
     //     ],
     //   },
     // },
-
-    markdownImage: false,
   },
   
 },{ custom: true });
