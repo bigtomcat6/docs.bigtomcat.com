@@ -213,11 +213,19 @@ export default hopeTheme({
       components: ["Badge", "VPCard"],
     },
 
-    slimsearch: {
-      hotKeys: [
-        { key: "k", ctrl: true },
-        { key: "k", meta: true },
-      ]
+    // slimsearch: {
+    //   indexContent: true,
+    //   suggestion: true,
+    //   hotKeys: [
+    //     { key: "k", ctrl: true },
+    //     { key: "k", meta: true },
+    //   ]
+    // },
+
+    docsearch: {
+      appId: "Q1DQBBQMEO",
+      apiKey: "c8451fd9ea8dfb915a9b10a4963312f1",
+      indexName: "bigtomcat",
     },
 
     icon: {
