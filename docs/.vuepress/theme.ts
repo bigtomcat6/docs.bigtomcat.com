@@ -296,4 +296,7 @@ export default hopeTheme({
     // },
   },
   
-},{ custom: true });
+},{
+  check: true,
+  custom: true
+});
