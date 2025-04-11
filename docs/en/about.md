@@ -4,6 +4,7 @@ icon: mdi:about-circle-outline
 article: false
 index: false
 sidebar: false
+contributors: false
 ---
 
 ## How's Docs
