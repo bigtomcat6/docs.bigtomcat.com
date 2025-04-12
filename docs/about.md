@@ -3,6 +3,7 @@ title: 关于
 icon: mdi:about-circle-outline
 article: false
 index: false
+contributors: false
 sidebar: false
 ---
 

@@ -213,6 +213,27 @@ export default hopeTheme({
       components: ["Badge", "VPCard"],
     },
 
+    git: {
+      contributors: {
+        avatar: true,
+        info: [
+          {
+            username: "bigtomcat6",
+            name: "How",
+            alias: "How",
+            url: "https://www.bigtomcat.com"
+          },
+          {
+            username: "bigtomcat",
+            name: "How",
+            alias: "How",
+            avatar: "https://avatars.githubusercontent.com/bigtomcat6?v=4",
+            url: "https://www.bigtomcat.com"
+          }
+        ]
+      }
+    },
+
     // slimsearch: {
     //   indexContent: true,
     //   suggestion: true,
@@ -235,6 +256,8 @@ export default hopeTheme({
     redirect: {
       switchLocale: 'modal',
     },
+
+    sitemap: true,
 
     // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
     // pwa: {
@@ -294,4 +317,7 @@ export default hopeTheme({
     // },
   },
   
-},{ custom: true });
+},{
+  check: true,
+  custom: true
+});
