@@ -213,6 +213,27 @@ export default hopeTheme({
       components: ["Badge", "VPCard"],
     },
 
+    git: {
+      contributors: {
+        avatar: true,
+        info: [
+          {
+            username: "bigtomcat6",
+            name: "How",
+            alias: "How",
+            url: "https://www.bigtomcat.com"
+          },
+          {
+            username: "bigtomcat",
+            name: "How",
+            alias: "How",
+            avatar: "https://avatars.githubusercontent.com/bigtomcat6?v=4",
+            url: "https://www.bigtomcat.com"
+          }
+        ]
+      }
+    },
+
     // slimsearch: {
     //   indexContent: true,
     //   suggestion: true,
