@@ -227,7 +227,7 @@ export default hopeTheme({
             username: "bigtomcat",
             name: "How",
             alias: "How",
-            avatar: "https://avatars.githubusercontent.com/bigtomcat6?v=4",
+            avatar: "https://gravatar.com/avatar/45d715f8557e0dd2efe7b5fc20f983907b512f81377bda9d39428c7c90796ece?d=retro",
             url: "https://www.bigtomcat.com"
           }
         ]
